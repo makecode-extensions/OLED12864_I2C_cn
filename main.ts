@@ -1,10 +1,10 @@
 /**
-* makecode I2C OLED 128x64 Èí¼ş°ü.
+* makecode I2C OLED 128x64 è½¯ä»¶åŒ….
 * From microbit/micropython Chinese community.
 * http://www.micropython.org.cn
 */
 
-//% weight=100 color=#0855AA icon="O" block="OLED12864Ä£¿é"
+//% weight=100 color=#0855AA icon="O" block="OLED12864æ¨¡å—"
 namespace OLED12864_I2C {
     let font = [
         0x0022d422,
@@ -179,12 +179,12 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÔÚ OLED ÉÏÏÔÊ¾Ò»¸öÏñËØ
+     * åœ¨ OLED ä¸Šæ˜¾ç¤ºä¸€ä¸ªåƒç´ 
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param color is dot color, eg: 1
      */
-    //% blockId="OLED12864_I2C_PIXEL" block="ÏÔÊ¾ÏñËØ x %x|y %y|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_PIXEL" block="æ˜¾ç¤ºåƒç´  x %x|y %y|é¢œè‰² %color"
     //% weight=70 blockGap=8
     export function pixel(x: number, y: number, color: number = 1) {
         let page = y / 8
@@ -207,13 +207,13 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÏÔÊ¾Ò»¸ö×Ö·û´®
+     * æ˜¾ç¤ºä¸€ä¸ªå­—ç¬¦ä¸²
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param s is the text will be show, eg: 'Hello!'
      * @param color is string color, eg: 1
      */
-    //% blockId="OLED12864_I2C_SHOWSTRING" block="ÏÔÊ¾ÎÄ×Ö x %x|y %y|ÎÄ×Ö %s|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_SHOWSTRING" block="æ˜¾ç¤ºæ–‡å­— x %x|y %y|æ–‡å­— %s|é¢œè‰² %color"
     //% weight=80 blockGap=8
     export function showString(x: number, y: number, s: string, color: number = 1) {
         let col = 0
@@ -243,26 +243,26 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÏÔÊ¾Ò»¸öÕûÊı
+     * æ˜¾ç¤ºä¸€ä¸ªæ•´æ•°
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param num is the number will be show, eg: 12
      * @param color is number color, eg: 1
      */
-    //% blockId="OLED12864_I2C_NUMBER" block="ÏÔÊ¾Êı×Ö x %x|y %y|Êı×Ö %num|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_NUMBER" block="æ˜¾ç¤ºæ•°å­— x %x|y %y|æ•°å­— %num|é¢œè‰² %color"
     //% weight=80 blockGap=8
     export function showNumber(x: number, y: number, num: number, color: number = 1) {
         showString(x, y, num.toString(), color)
     }
 
     /**
-     * »æÖÆÒ»ÌõË®Æ½Ïß¶Î
+     * ç»˜åˆ¶ä¸€æ¡æ°´å¹³çº¿æ®µ
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param len is the length of line, eg: 10
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_HLINE" block="»æÖÆË®Æ½Ïß¶Î x %x|y %y|³¤¶È %len|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_HLINE" block="ç»˜åˆ¶æ°´å¹³çº¿æ®µ x %x|y %y|é•¿åº¦ %len|é¢œè‰² %color"
     //% weight=71 blockGap=8
     export function hline(x: number, y: number, len: number, color: number = 1) {
         for (let i = x; i < (x + len); i++)
@@ -270,13 +270,13 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * »æÖÆÒ»Ìõ´¹Ö±Ïß¶Î
+     * ç»˜åˆ¶ä¸€æ¡å‚ç›´çº¿æ®µ
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param len is the length of line, eg: 10
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_VLINE" block="»æÖÆ´¹Ö±Ïß¶Î x %x|y %y|³¤¶È %len|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_VLINE" block="ç»˜åˆ¶å‚ç›´çº¿æ®µ x %x|y %y|é•¿åº¦ %len|é¢œè‰² %color"
     //% weight=72 blockGap=8
     export function vline(x: number, y: number, len: number, color: number = 1) {
         for (let i = y; i < (y + len); i++)
@@ -284,14 +284,14 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÔÚÖ¸¶¨Î»ÖÃ»æÖÆ¾ØĞÎ
+     * åœ¨æŒ‡å®šä½ç½®ç»˜åˆ¶çŸ©å½¢
      * @param x1 is X alis, eg: 0
      * @param y1 is Y alis, eg: 0
      * @param x2 is X alis, eg: 60
      * @param y2 is Y alis, eg: 30
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_RECT" block="»æÖÆ¾ØĞÎ x1 %x1|y1 %y1|x2 %x2|y2 %y2|ÑÕÉ« %color"
+    //% blockId="OLED12864_I2C_RECT" block="ç»˜åˆ¶çŸ©å½¢ x1 %x1|y1 %y1|x2 %x2|y2 %y2|é¢œè‰² %color"
     //% weight=73 blockGap=8
     export function rect(x1: number, y1: number, x2: number, y2: number, color: number = 1) {
         if (x1 > x2)
@@ -305,10 +305,10 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÆÁÄ»ÄÚÈİ·´ÏÔ¡£true·´ÏÔ£¬falseÕı³£ÏÔÊ¾
+     * å±å¹•å†…å®¹åæ˜¾ã€‚trueåæ˜¾ï¼Œfalseæ­£å¸¸æ˜¾ç¤º
      * @param d true: invert / false: normal, eg: true
      */
-    //% blockId="OLED12864_I2C_INVERT" block="ÆÁÄ»·´ÏÔ %d"
+    //% blockId="OLED12864_I2C_INVERT" block="å±å¹•åæ˜¾ %d"
     //% weight=65 blockGap=8
     export function invert(d: boolean = true) {
         let n = (d) ? 0xA7 : 0xA6
@@ -316,9 +316,9 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ÖØĞÂ»æÖÆÆÁÄ»µÄÏÔÊ¾ÄÚÈİ
+     * é‡æ–°ç»˜åˆ¶å±å¹•çš„æ˜¾ç¤ºå†…å®¹
      */
-    //% blockId="OLED12864_I2C_DRAW" block="Ë¢ĞÂÏÔÊ¾"
+    //% blockId="OLED12864_I2C_DRAW" block="åˆ·æ–°æ˜¾ç¤º"
     //% weight=64 blockGap=8
     export function draw() {
         set_pos()
@@ -326,9 +326,9 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * Çå³ş OLED Ä£¿éµÄÏÔÊ¾ÄÚÈİ
+     * æ¸…æ¥š OLED æ¨¡å—çš„æ˜¾ç¤ºå†…å®¹
      */
-    //% blockId="OLED12864_I2C_CLEAR" block="Çå³şÏÔÊ¾ÄÚÈİ"
+    //% blockId="OLED12864_I2C_CLEAR" block="æ¸…æ¥šæ˜¾ç¤ºå†…å®¹"
     //% weight=63 blockGap=8
     export function clear() {
         _screen.fill(0)
@@ -337,28 +337,28 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * ´ò¿ª OLED Ä£¿éµÄÆÁÄ»ÏÔÊ¾
+     * æ‰“å¼€ OLED æ¨¡å—çš„å±å¹•æ˜¾ç¤º
      */
-    //% blockId="OLED12864_I2C_ON" block="ÏÔÊ¾´ò¿ª"
+    //% blockId="OLED12864_I2C_ON" block="æ˜¾ç¤ºæ‰“å¼€"
     //% weight=62 blockGap=8
     export function on() {
         cmd1(0xAF)
     }
 
     /**
-     * ¹Ø±Õ OLED Ä£¿éµÄÆÁÄ»ÏÔÊ¾
+     * å…³é—­ OLED æ¨¡å—çš„å±å¹•æ˜¾ç¤º
      */
-    //% blockId="OLED12864_I2C_OFF" block="ÏÔÊ¾¹Ø±Õ"
+    //% blockId="OLED12864_I2C_OFF" block="æ˜¾ç¤ºå…³é—­"
     //% weight=61 blockGap=8
     export function off() {
         cmd1(0xAE)
     }
 
     /**
-     * ·Å´óÄ£Ê½£¬true·Å´óÏÔÊ¾£¬falseÕı³£ÏÔÊ¾
+     * æ”¾å¤§æ¨¡å¼ï¼Œtrueæ”¾å¤§æ˜¾ç¤ºï¼Œfalseæ­£å¸¸æ˜¾ç¤º
      * @param d true zoom / false normal, eg: true
      */
-    //% blockId="OLED12864_I2C_ZOOM" block="·Å´óÄ£Ê½ %d"
+    //% blockId="OLED12864_I2C_ZOOM" block="æ”¾å¤§æ¨¡å¼ %d"
     //% weight=60 blockGap=8
     export function zoom(d: boolean = true) {
         _ZOOM = (d) ? 1 : 0
@@ -366,10 +366,10 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * OLED ³õÊ¼»¯
-     * @param addr ÊÇ i2c µØÖ·, eg: 60
+     * OLED åˆå§‹åŒ–
+     * @param addr æ˜¯ i2c åœ°å€, eg: 60
      */
-    //% blockId="OLED12864_I2C_init" block="³õÊ¼»¯ OLED£¬ÉèÖÃ I2C µØÖ·Îª %addr"
+    //% blockId="OLED12864_I2C_init" block="åˆå§‹åŒ– OLEDï¼Œè®¾ç½® I2C åœ°å€ä¸º %addr"
     //% weight=100 blockGap=8
     export function init(addr: number) {
         _I2CAddr = addr;
