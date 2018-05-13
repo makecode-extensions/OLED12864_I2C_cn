@@ -326,9 +326,9 @@ namespace OLED12864_I2C {
     }
 
     /**
-     * 清楚 OLED 模块的显示内容
+     * 清除 OLED 模块的显示内容
      */
-    //% blockId="OLED12864_I2C_CLEAR" block="清楚显示内容"
+    //% blockId="OLED12864_I2C_CLEAR" block="清除显示内容"
     //% weight=63 blockGap=8
     export function clear() {
         _screen.fill(0)
