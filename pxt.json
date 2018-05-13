@@ -1,7 +1,7 @@
 {
-    "name": "OLED12864_I2C Ä£¿é",
+    "name": "OLED12864_I2C æ¨¡å—",
     "version": "1.0.0",
-    "description": "makecode µÄ micro:bit °æ I2C ½Ó¿Ú OLED 128 x 64 ÏÔÊ¾Ä£¿éÈí¼ş°ü£¬À´×Ô MicroPython/micro:bit ÖĞÎÄÉçÇø",
+    "description": "makecode çš„ micro:bit ç‰ˆ I2C æ¥å£ OLED 128 x 64 æ˜¾ç¤ºæ¨¡å—è½¯ä»¶åŒ…ï¼Œæ¥è‡ª MicroPython/micro:bit ä¸­æ–‡ç¤¾åŒº",
     "license": "MIT",
     "dependencies": {
         "core": "*"
