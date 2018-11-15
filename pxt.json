@@ -1,14 +1,16 @@
 {
     "name": "OLED12864_I2C",
-    "version": "1.2.0",
-    "description": "makecode 的 micro:bit 版 I2C 接口 OLED 128 x 64 显示模块软件包，来自 MicroPython/micro:bit 中文社区",
+    "version": "1.5.0",
+    "description": "makecode 的 micro:bit 版 I2C 接口 OLED 128 x 64 显示模块扩展，来自 MicroPython/micro:bit 中文社区",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "pxtparts.json",
+        "OLED12864_I2C.ts",
+        "parts/OLED12864_I2C.svg"
     ],
     "testFiles": [
         "test.ts"
