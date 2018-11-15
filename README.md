@@ -1,6 +1,6 @@
 # I2C 接口 OLED 128x64 模块
 
-makecode 的 microbit 版 I2C 接口 OLED 128x64 显示模块软件包。  
+makecode 的 microbit 版 I2C 接口 OLED 128x64 显示模块扩展。  
 
 部分驱动代码来自 fizban99 的 microbit OLED 驱动:  
 https://github.com/fizban99/microbit_ssd1306
@@ -8,16 +8,33 @@ https://github.com/fizban99/microbit_ssd1306
 作者: shaoziyang  
 时间: 2018年5月  
 
-![](https://raw.githubusercontent.com/microbit-makecode-packages/OLED12864_I2C_cn/master/icon.png)  
+![](oled.png)  
   
 
-## 使用方法
+## 添加扩展
 
-打开 makecode 编辑器，在项目中选择添加软件包，然后在地址栏输入下面网址  
+打开 makecode 编辑器，在项目中选择扩展，然后在地址栏输入下面网址  
 
-https://github.com/microbit-makecode-packages/OLED12864_I2C_cn  
+https://github.com/makecode-packages/OLED12864_I2C_cn  
 
-搜索后就可以添加并使用本软件包了。
+搜索后就可以添加并使用扩展了。
+
+
+## 基本用法
+
+```
+let item = 0
+OLED12864_I2C.init(60)
+OLED12864_I2C.rect(0, 0, 60, 30, 1)
+OLED12864_I2C.showString(0, 0, "Hello!", 1)
+OLED12864_I2C.showString(0, 1, "1234567890", 0)
+item = 0
+basic.forever(() => {
+    OLED12864_I2C.showNumber(0, 3, item, 1)
+    item += 1
+    basic.pause(1000)
+}) 
+```
 
 
 ## API
@@ -88,7 +105,7 @@ d: 模式
 
 ## 演示
 
-![](https://raw.githubusercontent.com/microbit-makecode-packages/OLED12864_I2C_cn/master/demo.png)  
+![](demo.png)  
 
 
 
